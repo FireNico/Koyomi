@@ -1,11 +1,14 @@
-const http = require('http');
+const express = require('express');
+const app = express();
+const path = require('path');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
-  res.end('<h1>¡Hola desde Node.js en Ubuntu!</h1>');
+// Servir archivos estáticos desde la carpeta actual
+app.use(express.static(__dirname));
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-server.listen(3000, () => {
-  console.log('Servidor corriendo en http://localhost:3000');
+app.listen(3000, () => {
+  console.log('Servidor en http://localhost:3000');
 });

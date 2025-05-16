@@ -9,8 +9,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^5.1.0"
-  }
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FireNico/Koyomi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FireNico/Koyomi/issues"
+  },
+  "homepage": "https://github.com/FireNico/Koyomi#readme",
+  "description": ""
 }

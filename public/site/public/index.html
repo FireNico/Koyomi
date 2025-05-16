@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendario</title>
+  <link rel="stylesheet" href="/libs/event-calendar/core/index.css">
+  <link rel="stylesheet" href="/libs/event-calendar/list/index.css">
+</head>
+<body>
+  <div id="ec"></div>
+
+  <script src="/libs/event-calendar/core/index.iife.js" type="module"></script>
+  <script src="/libs/event-calendar/list/index.iife.js"></script>
+  <script>
+    const { Calendar } = window.EventCalendarCore;
+    const { List } = window.EventCalendarList;
+
+    new Calendar({
+      target: document.getElementById('ec'),
+      props: {
+        plugins: [List],
+        options: {
+          view: 'listWeek',
+          events: [
+            { title: 'Evento A', start: '2025-05-12T10:00:00' },
+            { title: 'Evento B', start: '2025-05-13T12:00:00' }
+          ]
+        }
+      }
+    });
+  </script>
+</body>
+</html>

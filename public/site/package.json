@@ -1,0 +1,38 @@
+{
+  "devDependencies": {
+    "@event-calendar/core": "^4.1.0",
+    "@event-calendar/time-grid": "^3.12.0"
+  },
+  "name": "site",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@event-calendar/list": "^3.12.0",
+    "acorn": "^8.14.1",
+    "aria-query": "^5.3.2",
+    "axobject-query": "^4.1.0",
+    "clsx": "^2.1.1",
+    "code-red": "^1.0.4",
+    "css-tree": "^2.3.1",
+    "esm-env": "^1.2.2",
+    "esrap": "^1.4.6",
+    "estree-walker": "^3.0.3",
+    "express": "^5.1.0",
+    "fullcalendar": "^6.1.17",
+    "is-reference": "^3.0.3",
+    "locate-character": "^3.0.0",
+    "magic-string": "^0.30.17",
+    "mdn-data": "^2.0.30",
+    "periscopic": "^3.1.0",
+    "source-map-js": "^1.2.1",
+    "svelte": "^5.28.2",
+    "tui-calendar": "^1.13.1",
+    "zimmerframe": "^1.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

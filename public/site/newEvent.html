@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
   	<title>Sidebar 01</title>
@@ -19,7 +19,7 @@
 		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
-	            <a href="#">Home</a>
+	            <a href="index.html">Home</a>
 	          </li>
 	          <li>
 	              <a href="newEvent.html">Nuevo Evento</a>
@@ -57,33 +57,51 @@
             <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars"></i>
             </button>
-
-            <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-              </ul>
-            </div> -->
           </div>
         </nav>
-        <div id="calendar"></div>
+        <div class="container mt-5">
+          <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+              <form action="#" class="signin-form">
+                <div class="form-group mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" id="nombre" class="form-control" placeholder="Nombre del evento" required>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="fechaInicio" class="form-label">Fecha inicio</label>
+                  <input type="date" id="fechaInicio" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="fechaFinal" class="form-label">Fecha final</label>
+                  <input type="date" id="fechaFinal" class="form-control" required>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="ubicacion" class="form-label">Ubicación</label>
+                  <input type="text" id="ubicacion" class="form-control" placeholder="Dirección o enlace" required>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="descripcion" class="form-label">Descripción</label>
+                  <textarea id="descripcion" class="form-control" rows="3" placeholder="Descripción del evento" required></textarea>
+                </div>
+
+                <div class="form-group mb-3">
+                  <button type="submit" class="form-control btn btn-primary submit px-3">Crear Evento</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
 		</div>
-    
+
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/calendar.js" type="module"></script>
+    <script src="js/newEvent.js" type="module"></script>
   </body>
 </html>

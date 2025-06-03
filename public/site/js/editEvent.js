@@ -26,11 +26,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       function formatDate(dateStr) {
         const date = new Date(dateStr);
-        return date.toISOString().split("T")[0]; // Solo la parte YYYY-MM-DD
+        const offset = date.getTimezoneOffset();
+        const localDate = new Date(date.getTime() - offset * 60000);
+        return localDate.toISOString().slice(0, 16);
       }
 
       // Rellenar el formulario con los datos recibidos
-      console.log(eventData.title);
       document.getElementById("nombre").value = eventData.title || "";
       document.getElementById("ubicacion").value = eventData.ubicacion || "";
       document.getElementById("descripcion").value =
@@ -62,9 +63,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     };
 
     try {
-      let url = "http://localhost:5000/nuevoEvento";
-      let method = "POST";
-
       if (eventId) {
         // Si tenemos ID, hacemos PUT para actualizar
         url = `http://localhost:5000/evento/${eventId}`;

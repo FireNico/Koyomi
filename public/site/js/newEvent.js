@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const data = {
       // id_usuario: localStorage.getItem("id_usuario"),
-      id_usuario: 1,
       title: document.getElementById("nombre").value,
       ubicacion: document.getElementById("ubicacion").value,
       descripcion: document.getElementById("descripcion").value,
@@ -14,12 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
       end: document.getElementById("fechaFinal").value,
     };
 
+    console.log(data);
+
     try {
+      const token = localStorage.getItem("token");
       const resp = await fetch("http://localhost:5000/nuevoEvento", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
           "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
         },
       });
       if (!resp.ok) throw new Error(`Error: ${resp.status} ${resp.statusText}`);
@@ -34,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     } catch (error) {
-      console.error("Error al enviar datos:", error);
+      console.error("Error al enviar datos:", error.message);
       alert("Fallo en la conexión al servidor");
     }
   });

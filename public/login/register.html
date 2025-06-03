@@ -24,27 +24,27 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 						<h3 class="mb-4 text-center">&mdash; Registrarse &mdash;</h3>
-						<form action="#" class="signin-form">
+						<form action="#" class="signin-form" id="registerForm">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Nombre" required>
+								<input type="text" id="nombre" class="form-control" placeholder="Nombre" required>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Apellido" required>
+								<input type="text" id="apellido" class="form-control" placeholder="Apellido" required>
 							</div>
 							<div class="form-group">
-								<input type="email" class="form-control" placeholder="Correo" required>
+								<input type="email" id="correo" class="form-control" placeholder="Correo" required>
 							</div>
 							<div class="form-group">
-								<input type="date" class="form-control" placeholder="Fecha de nacimiento" required>
+								<input type="date" id="fecha_nacimiento" class="form-control" placeholder="Fecha de nacimiento" required>
 								<span class="placeholder">Fecha de nacimiento</span>
 							</div>
 							 <div class="form-group">
-								<input id="password-field" type="password" class="form-control" placeholder="Contrseña" required>
-								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+								<input id="contrasenya" id="contrasenya" type="password" class="form-control" placeholder="Contrseña" required>
+								<span toggle="#contrasenya" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 							</div>
 							 <div class="form-group">
-								<input id="password-field" type="password" class="form-control" placeholder="Contrseña" required>
-								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+								<input id="confirmar" type="password" class="form-control" placeholder="Contrseña" required>
+								<span toggle="#confirmar" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 							</div>
 							
 							<div class="form-group">
@@ -63,6 +63,7 @@
   	<script src="js/popper.js"></script>
   	<script src="js/bootstrap.min.js"></script>
   	<script src="js/main.js"></script>
+  	<script src="js/register.js" defer></script>
 
 	</body>
 </html>

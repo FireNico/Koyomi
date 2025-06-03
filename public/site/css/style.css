@@ -8140,6 +8140,10 @@ body {
   background: #fafafa;
   color: gray; }
 
+#calendar {
+  width: 100% !important;
+}
+
 a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;

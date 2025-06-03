@@ -10,6 +10,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const fecha_nacimiento = document.getElementById("fecha_nacimiento").value;
     const contrasena = document.getElementById("contrasenya").value;
     const confirmar = document.getElementById("confirmar").value;
+    const form = document.getElementById("registerForm");
+    const privacyCheck = document.getElementById("privacyCheck");
+
+    form.addEventListener("submit", (e) => {
+      if (!privacyCheck.checked) {
+        e.preventDefault();
+        alert("Debes aceptar la Política de Privacidad para continuar.");
+      }
+    });
 
     if (contrasena !== confirmar) {
       return alert("Las contraseñas no coinciden");

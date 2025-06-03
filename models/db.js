@@ -55,21 +55,21 @@ app.post("/usuarios", async (req, res) => {
   }
 });
 
-// app.get("/usuarios/", authenticate, async (req, res) => {
-//   const id_usuario = req.user.id;
+app.get("/users/", authenticate, async (req, res) => {
+  const id_usuario = req.user.id;
 
-//   try {
-//     const data = await connection
-//       .promise()
-//       .query("SELECT * from usuario WHERE id = ?", [id_usuario]);
-//     res.status(202).json(data[0]);
-//   } catch (err) {
-//     console.error("Error al obtener el usuario:", err.message);
-//     res.status(500).json({
-//       message: err,
-//     });
-//   }
-// });
+  try {
+    const data = await connection
+      .promise()
+      .query("SELECT * from usuario WHERE id = ?", [id_usuario]);
+    res.status(202).json(data[0]);
+  } catch (err) {
+    console.error("Error al obtener el usuario:", err.message);
+    res.status(500).json({
+      message: err,
+    });
+  }
+});
 
 app.get("/usuarios", authenticate, async (req, res) => {
   try {

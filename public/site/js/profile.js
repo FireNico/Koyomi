@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.location.href = "login/index.html"; // Redirige si no hay token
   }
   try {
-    const resp = await fetch("http://localhost:5000/usuarios", {
+    const resp = await fetch("http://localhost:5000/users", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const data = await resp.json();
     const userData = data[0];
+    console.log("Datos del usuario:", userData); // Para depuración
 
     document.getElementById("imagen").src =
       "data:image/jpeg;base64," + userData.imagen || "";

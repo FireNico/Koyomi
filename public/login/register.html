@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Login 10</title>
+  	<title>Registro</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="icon" type="image/vnd.icon" href="images/logo.png">  
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -16,8 +16,9 @@
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Koyomi</h2>
+				<div class="d-flex align-items-center justify-content-center">
+				<img src="images/logo.png" alt="Logo" style="height: 60px; margin-right: 10px; margin-bottom: 10px;">
+				<h2 class="heading-section m-0">Koyomi</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">
@@ -36,7 +37,6 @@
 							</div>
 							<div class="form-group">
 								<input type="date" id="fecha_nacimiento" class="form-control" placeholder="Fecha de nacimiento" required>
-								<span class="placeholder">Fecha de nacimiento</span>
 							</div>
 							 <div class="form-group">
 								<input id="contrasenya" id="contrasenya" type="password" class="form-control" placeholder="Contrseña" required>
@@ -46,16 +46,85 @@
 								<input id="confirmar" type="password" class="form-control" placeholder="Contrseña" required>
 								<span toggle="#confirmar" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 							</div>
-							
+							<div class="form-group form-check text-start">
+								<input type="checkbox" class="form-check-input" id="privacyCheck" required>
+								<label class="form-check-label" for="privacyCheck">
+									He leído y acepto la <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">Política de Privacidad</a>
+								</label>
+							</div>
 							<div class="form-group">
 								<button type="submit" class="form-control btn btn-primary submit px-3">Registarse</button>
 							</div>
 							<div class="form-group d-md-flex">
 							</div>
 						</form>
+						<p class="w-100 text-center">&mdash; <a href="#" style="color: #fff">Ya tengo cuenta</a> &mdash;</p>
+						<form action="index.html" class="signin-form">
+							<div class="form-group">
+								<button type="submit" class="form-control btn btn-primary submit px-3">Iniciar sesión</a></button>
+							</div>
 				    </div>
 				</div>
 			</div>
+			<!-- Modal de Política de Privacidad -->
+			<div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+
+				<div class="modal-header">
+					<h5 class="modal-title" id="privacyModalLabel">Política de Privacidad</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+				</div>
+
+				<div class="modal-body">
+					<h6>1. Introducción</h6>
+					<p>
+					En Koyomi valoramos tu privacidad y nos comprometemos a proteger tus datos personales. Esta política detalla cómo recogemos, usamos y almacenamos tu información.
+					</p>
+
+					<h6>2. Datos que recopilamos</h6>
+					<ul>
+					<li>Información personal (nombre, correo electrónico, fecha de nacimiento)</li>
+					<li>Información de inicio de sesión (contraseña cifrada)</li>
+					<li>Interacciones con la plataforma (eventos creados, participación en eventos, etc.)</li>
+					</ul>
+
+					<h6>3. Uso de tus datos</h6>
+					<p>
+					Tus datos se utilizan exclusivamente para los siguientes fines:
+					</p>
+					<ul>
+					<li>Proporcionar acceso a la plataforma</li>
+					<li>Mejorar nuestros servicios</li>
+					<li>Comunicarnos contigo solo cuando sea necesario</li>
+					</ul>
+
+					<h6>4. Compartición de datos</h6>
+					<p>
+					No compartimos tus datos personales con terceros sin tu consentimiento, salvo que sea requerido por ley.
+					</p>
+
+					<h6>5. Seguridad</h6>
+					<p>
+					Implementamos medidas de seguridad técnicas y organizativas para proteger tus datos frente a accesos no autorizados.
+					</p>
+
+					<h6>6. Tus derechos</h6>
+					<ul>
+					<li>Acceder a tus datos personales</li>
+					<li>Solicitar la corrección o eliminación de tus datos</li>
+					<li>Retirar el consentimiento en cualquier momento</li>
+					</ul>
+				</div>
+
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+				</div>
+
+				</div>
+			</div>
+			</div>
+
 		</div>
 	</section>
 
@@ -63,7 +132,8 @@
   	<script src="js/popper.js"></script>
   	<script src="js/bootstrap.min.js"></script>
   	<script src="js/main.js"></script>
-  	<script src="js/register.js" defer></script>
+  	<script src="js/register.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 	</body>
 </html>

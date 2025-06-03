@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.location.href = "login/index.html"; // Redirige si no hay token
   }
   try {
-    const resp = await fetch("http://localhost:5000/users", {
+    const resp = await fetch("http://107.22.221.236:5000/users", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const base64String = reader.result.split(",")[1]; // quitar prefijo data:image/png;base64,
       console.log("Base64 String:", base64String); // Para depuración
       try {
-        const resp = await fetch("http://localhost:5000/usuarios/foto", {
+        const resp = await fetch("http://107.22.221.236:5000/usuarios/foto", {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",

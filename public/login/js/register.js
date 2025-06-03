@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       // Verificar si el correo ya está registrado
       const checkCorreo = await fetch(
-        `http://localhost:5000/usuarios/existe?correo=${encodeURIComponent(
+        `http://107.22.221.236:5000/usuarios/existe?correo=${encodeURIComponent(
           correo
         )}`
       );
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Enviar los datos para registrar al usuario
-      const resp = await fetch("http://localhost:5000/usuarios", {
+      const resp = await fetch("http://107.22.221.236:5000/usuarios", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

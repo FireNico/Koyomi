@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   async function getImagen() {
     try {
-      const resp = await fetch("http://localhost:5000/usuarios/imagen", {
+      const resp = await fetch("http://107.22.221.236:5000/usuarios/imagen", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   async function getEventos() {
     try {
-      const resp = await fetch("http://localhost:5000/eventos", {
+      const resp = await fetch("http://107.22.221.236:5000/eventos", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           try {
             const resp = await fetch(
-              `http://localhost:5000/evento/${eventId}/participantes`,
+              `http://107.22.221.236:5000/evento/${eventId}/participantes`,
               {
                 method: "GET",
                 headers: {
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           .addEventListener("click", async () => {
             try {
               const resp = await fetch(
-                `http://localhost:5000/evento/${eventId}/inscribirse`,
+                `http://107.22.221.236:5000/evento/${eventId}/inscribirse`,
                 {
                   method: "PUT",
                   headers: {

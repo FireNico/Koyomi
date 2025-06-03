@@ -65,11 +65,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
       if (eventId) {
         // Si tenemos ID, hacemos PUT para actualizar
-        url = `http://localhost:5000/evento/${eventId}`;
+        url = `http://107.22.221.236:5000/evento/${eventId}`;
         method = "PUT";
       }
 
-      const resp = await fetch(`http://localhost:5000/evento/${eventId}`, {
+      const resp = await fetch(`http://107.22.221.236:5000/evento/${eventId}`, {
         method: "PUT",
         body: JSON.stringify(data),
         headers: {

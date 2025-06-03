@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   async function getUsuarios() {
     try {
-      const resp = await fetch("http://localhost:5000/usuarios", {
+      const resp = await fetch("http://107.22.221.236:5000/usuarios", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   async function getSolicitudes() {
     try {
-      const resp = await fetch("http://localhost:5000/solicitud", {
+      const resp = await fetch("http://107.22.221.236:5000/solicitud", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -150,7 +150,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   async function envairAmistad(id) {
     try {
-      const resp = await fetch(`http://localhost:5000/nuevoAmigo`, {
+      const resp = await fetch(`http://107.22.221.236:5000/nuevoAmigo`, {
         method: "POST",
         body: JSON.stringify({
           id_amigo: id,
@@ -175,13 +175,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   async function aceptarSolicitud(idAmigo) {
     try {
-      const resp = await fetch(`http://localhost:5000/solicitud/${idAmigo}`, {
-        method: "PUT",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
+      const resp = await fetch(
+        `http://107.22.221.236:5000/solicitud/${idAmigo}`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!resp.ok) throw new Error(`Error: ${resp.status} ${resp.statusText}`);
 
@@ -196,13 +199,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   async function denegarSolicitud(idAmigo) {
     try {
-      const resp = await fetch(`http://localhost:5000/solicitud/${idAmigo}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
-        },
-      });
+      const resp = await fetch(
+        `http://107.22.221.236:5000/solicitud/${idAmigo}`,
+        {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!resp.ok) throw new Error(`Error: ${resp.status} ${resp.statusText}`);
 

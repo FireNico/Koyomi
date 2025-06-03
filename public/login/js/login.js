@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const contrasenya = document.getElementById("password-field").value;
 
     try {
-      const resp = await fetch("http://localhost:5000/login", {
+      const resp = await fetch("http://107.22.221.236:5000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

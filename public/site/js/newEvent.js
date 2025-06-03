@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     try {
       const token = localStorage.getItem("token");
-      const resp = await fetch("http://localhost:5000/nuevoEvento", {
+      const resp = await fetch("http://107.22.221.236:5000/nuevoEvento", {
         method: "POST",
         body: JSON.stringify(data),
         headers: {

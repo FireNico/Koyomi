@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (eventId) {
     try {
       // Obtener datos del evento desde el backend
-      const resp = await fetch(`http://localhost:5000/evento/${eventId}`, {
+      const resp = await fetch(`http://107.22.221.236:5000/evento/${eventId}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

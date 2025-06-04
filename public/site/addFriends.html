@@ -1,101 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  	<title>Buscar amigos</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/vnd.icon" href="images/logo.png">  
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
-		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="css/style.css">
-    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
-  </head>
-  <body>
-		
-		<div class="wrapper d-flex align-items-stretch">
-			<nav id="sidebar">
-				<div class="p-4 pt-5">
-		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
-	        <ul class="list-unstyled components mb-5">
-	          <li class="active">
-	            <a href="../">Home</a>
-	          </li>
-	          <li>
-	              <a href="newEvent.html">Nuevo Evento</a>
-	          </li>
-            <li>
-              <a href="addFriends.html">Añadir amigos</a>
-	          </li>
-	          <li>
-              <a href="profile.html">Perfil</a>
-	          </li>
-	          <li>
-              <a href="#" id="logoutLink">Logout</a>
-	          </li>
-	          
-	        </ul>
+<head>
+  <title>Buscar amigos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/vnd.icon" href="images/logo.png">
 
-	        <div class="footer">
-	        </div>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-	      </div>
-    	</nav>
-        <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+</head>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-          </div>
-        </nav>
-               <div class="container" class="p-4 p-md-5">
-    <h2 class="mb-3">Añadir Amigos</h2>
+<body>
 
-    <!-- 🔍 Filtro -->
-    <input type="text" id="filtroNombre" class="form-control mb-3" placeholder="Buscar por nombre...">
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+      <div class="p-4 pt-5">
+        <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="../">Home</a>
+          </li>
+          <li>
+            <a href="newEvent.html">Nuevo Evento</a>
+          </li>
+          <li>
+            <a href="addFriends.html">Añadir amigos</a>
+          </li>
+          <li>
+            <a href="profile.html">Perfil</a>
+          </li>
+          <li>
+            <a href="#" id="logoutLink">Logout</a>
+          </li>
 
-    <!-- ⏳ Solicitudes pendientes -->
-<h5>Solicitudes pendientes</h5>
-<table class="table table-bordered table-striped">
-  <thead class="table-dark">
-    <tr>
-      <th>Nombre</th>
-      <th>Email</th>
-      <th>Acción</th>
-    </tr>
-  </thead>
-  <tbody id="tablaPendientes">
-    <!-- Se cargan dinámicamente -->
-  </tbody>
-</table>
-    <!-- 🧑‍🤝‍🧑 Tabla de usuarios -->
-    <h5>Usuarios disponibles</h5>
-<table class="table table-bordered table-striped mb-5">
-  <thead class="table-dark">
-    <tr>
-      <th>Nombre</th>
-      <th>Email</th>
-      <th>Acción</th>
-    </tr>
-  </thead>
-  <tbody id="tablaUsuarios">
-    <!-- Se cargan dinámicamente -->
-  </tbody>
-</table>
+        </ul>
 
+        <div class="footer">
+        </div>
 
-  </div>
       </div>
-		</div>
-    
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/logout.js"></script>
-    <script src="js/addFriends.js"></script>
-    <script src="js/imagen.js"></script>
-    <script src="js/imagen.js"></script>
-  </body>
+    </nav>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+      </nav>
+      <div class="container" class="p-4 p-md-5">
+        <h2 class="mb-3">Añadir Amigos</h2>
+
+        <!-- 🔍 Filtro -->
+        <input type="text" id="filtroNombre" class="form-control mb-3" placeholder="Buscar por nombre...">
+
+        <!-- ⏳ Solicitudes pendientes -->
+        <h5>Solicitudes pendientes</h5>
+        <table class="table table-bordered table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaPendientes">
+            <!-- Se cargan dinámicamente -->
+          </tbody>
+        </table>
+        <!-- 🧑‍🤝‍🧑 Tabla de usuarios -->
+        <h5>Usuarios disponibles</h5>
+        <table class="table table-bordered table-striped mb-5">
+          <thead class="table-dark">
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaUsuarios">
+            <!-- Se cargan dinámicamente -->
+          </tbody>
+        </table>
+
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/logout.js"></script>
+  <script src="js/addFriends.js"></script>
+  <script src="js/imagen.js"></script>
+  <script src="js/imagen.js"></script>
+</body>
+
 </html>

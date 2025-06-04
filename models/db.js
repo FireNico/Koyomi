@@ -55,7 +55,8 @@ app.post("/usuarios", async (req, res) => {
   }
 });
 
-app.get("/users/", authenticate, async (req, res) => {
+
+app.get("/users", authenticate, async (req, res) => {
   const id_usuario = req.user.id;
 
   try {
